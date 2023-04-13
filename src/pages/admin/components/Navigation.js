@@ -1,15 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../style.css'
 const Navigation = () => {
   
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const navigate = useNavigate()
   const toggleNavigation = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const logOut = () => {
+    localStorage.clear();
+    navigate('/admin-login')
+  }
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary bg-secondary position-top">
       <div className="container">
@@ -33,7 +37,7 @@ const Navigation = () => {
               <Link className="nav-link" to="/orders" onClick={toggleNavigation}>View Orders</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/logout" onClick={toggleNavigation}>Logout</Link>
+              <Link className="nav-link"  onClick={logOut} >Logout</Link>
             </li>
           </ul>
         </div>
