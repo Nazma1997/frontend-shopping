@@ -3,6 +3,7 @@ import '../../style.css';
 import Navigation from '../../components/Navigation';
 import { Link } from 'react-router-dom';
 import { useDeleteReviewsMutation, useGetReviewsQuery } from '../../../../redux/sliceApi/reviewsApi';
+import Footer from '../../../../Footer';
 
 
 const AllReviews = () => {
@@ -66,6 +67,7 @@ const AllReviews = () => {
       </section>
       </div>
     </div>
+    <Footer />
   </div>
   )
 }

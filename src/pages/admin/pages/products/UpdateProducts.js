@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useUpdateProductMutation } from '../../../../redux/sliceApi/productSliceApi';
 import { useGetCategoryQuery } from '../../../../redux/sliceApi/categoryApi';
+import Footer from '../../../../Footer';
 
 const UpdateProducts = () => {
   const {id} = useParams()
@@ -169,6 +170,7 @@ const UpdateProducts = () => {
       </div>
     </div>
     </div>
+    <Footer />
   </div>
   )
 }

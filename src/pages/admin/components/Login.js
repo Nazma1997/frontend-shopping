@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import '../style.css';
 import { useNavigate } from 'react-router-dom';
 import Navigation from './Navigation';
+import Footer from '../../../Footer';
 const ADMIN_USERNAME = process.env.REACT_APP_ADMIN_USERNAME;
 const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD;
 
@@ -78,6 +79,7 @@ return (
         </div>
     </div>
 </section>
+<Footer />
 </div>
 
 );

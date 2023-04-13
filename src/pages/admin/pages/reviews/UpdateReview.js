@@ -1,5 +1,6 @@
 import React from 'react'
 import Navigation from '../../components/Navigation'
+import Footer from '../../../../Footer'
 
 const UpdateReview = () => {
   return (
@@ -100,6 +101,7 @@ const UpdateReview = () => {
       </div>
     </div>
     </div>
+    <Footer />
   </div>
   )
 }

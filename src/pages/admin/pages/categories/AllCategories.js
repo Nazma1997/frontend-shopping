@@ -3,6 +3,7 @@ import '../../style.css';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
 import { useDeleteCategoryMutation, useGetCategoryQuery } from '../../../../redux/sliceApi/categoryApi';
+import Footer from '../../../../Footer';
 
 
 const AllCategories = () => {
@@ -62,6 +63,7 @@ const AllCategories = () => {
       </section>
       </div>
     </div>
+    <Footer />
   </div>
   )
 }

@@ -3,6 +3,7 @@ import '../../style.css';
 import Navigation from '../../components/Navigation';
 import { useCreateCategoryMutation } from '../../../../redux/sliceApi/categoryApi';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../../../Footer';
 
 
 const AddCategory = () => {
@@ -74,6 +75,7 @@ const AddCategory = () => {
       </div>
       </div>
     </div>
+    <Footer />
    </div>
   )
 }

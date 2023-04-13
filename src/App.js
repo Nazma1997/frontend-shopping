@@ -39,7 +39,7 @@ const retrievedPassword = localStorage.getItem('password');
             <Route path='/add-category' element={<AddCategory />}  />
             <Route path='/reviews' element={<AllReviews/>}  />
             <Route path='/add-review' element={<AddReview />}  />
-            <Route path='/edit-review?:id' element={<UpdateReview />}  />
+            <Route path='/edit-review/:id' element={<UpdateReview />}  />
             <Route path='/orders' element={<AllOrders />}  />
           
         </>

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../style.css';
 import Navigation from '../../components/Navigation';
+import Footer from '../../../../Footer';
 
 
 const AddReview = () => {
@@ -105,6 +106,7 @@ const AddReview = () => {
       </div>
       </div>
     </div>
+    <Footer />
    </div>
   )
 }

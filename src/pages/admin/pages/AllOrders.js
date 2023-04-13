@@ -2,6 +2,7 @@ import React from 'react'
 // import '../../style.css';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import Footer from '../../../Footer';
 
 
 const AllOrders = () => {
@@ -45,6 +46,7 @@ const AllOrders = () => {
       </section>
       </div>
     </div>
+    <Footer />
   </div>
   )
 }

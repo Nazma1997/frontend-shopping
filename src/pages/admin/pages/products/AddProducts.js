@@ -5,6 +5,7 @@ import { useCreateProductMutation } from '../../../../redux/sliceApi/productSlic
 import { useGetCategoryQuery} from '../../../../redux/sliceApi/categoryApi'
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import Footer from '../../../../Footer';
 
 const AddProducts = () => {
 
@@ -172,6 +173,7 @@ const AddProducts = () => {
       </div>
       </div>
     </div>
+    <Footer />
    </div>
   )
 }

@@ -3,6 +3,7 @@ import '../../style.css';
 import Navigation from '../../components/Navigation';
 import { Link } from 'react-router-dom';
 import { useDeleteProductMutation, useGetProductQuery } from '../../../../redux/sliceApi/productSliceApi';
+import Footer from '../../../../Footer';
 
 
 const AllProducts = () => {
@@ -70,6 +71,7 @@ const AllProducts = () => {
       </section>
       </div>
     </div>
+    <Footer />
   </div>
   )
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navigation from '../../components/Navigation'
 import { useUpdateCategoryMutation } from '../../../../redux/sliceApi/categoryApi';
 import { useNavigate, useParams } from 'react-router-dom';
+import Footer from '../../../../Footer';
 
 const UpdateCategory = () => {
   const [updateCategory] = useUpdateCategoryMutation();
@@ -71,6 +72,7 @@ const UpdateCategory = () => {
       </div>
     </div>
     </div>
+    <Footer />
   </div>
   )
 }
