@@ -12,6 +12,7 @@ import AllOrders from "./pages/admin/pages/AllOrders";
 import AdminLogin from "./pages/admin/components/Login";
 import UpdateCategory from "./pages/admin/pages/categories/UpdateCategories";
 import AllReviews from "./pages/admin/pages/reviews/AllReview";
+import LandingHome from "./pages/landing/components/LandingHome";
 
 
 
@@ -47,6 +48,7 @@ const retrievedPassword = localStorage.getItem('password');
     }
           
       <Route path='/admin-login' element={<AdminLogin />}  />
+      <Route path='/' element={<LandingHome />}  />
    </>
      </Routes >
   </BrowserRouter>
