@@ -2,20 +2,23 @@ import React from 'react'
 import '../../style.css';
 import Navigation from '../../components/Navigation';
 import { Link } from 'react-router-dom';
+import { useDeleteReviewsMutation, useGetReviewsQuery } from '../../../../redux/sliceApi/reviewsApi';
 
 
-const AllReview = () => {
+const AllReviews = () => {
+  const {data: reviews = []} = useGetReviewsQuery();
+  const [deleteReviews] = useDeleteReviewsMutation();
+
+
   return (
   <div>
     <Navigation />
     <div className='mt-5'>
-      <div className='d-flex justify-content-between mx-5'>
+      <div className=' justify-content-start mx-5'>
           
-            <p >Published()</p>
+            <p >Published({reviews.length})</p>
           
-          <Link to='/add-review'>
-          <button>Add Review</button> 
-          </Link>
+         
       </div>
       <div>
       <section id="orders " className='mx-5'>
@@ -24,32 +27,41 @@ const AllReview = () => {
               <thead>
                   <tr>
                       
-                       <th>Product Id</th>
-                      <th>Product Name</th>
-                      <th>Product Quantity</th>
-                      <th>Product  Price</th>
+                      
+                      <th>Customer Name</th>
+                      <th>Customer Image</th>
+                      <th>Description</th>
+                      
+                      
+                      
                       <td>Actions</td>
                   </tr>
               </thead>
-              <tbody>
-                  <tr>
-                      
-                      <td>John Doe</td>
-                      <td>Product 1</td>
-                      <td>2</td>
-                      <td>$50.00</td>
-                      <td>
-                        <Link to='/edit-review' >
-                        <button>Edit</button>
-
-                        </Link>
-                        <button className='m-1'>Delete</button>
-                      </td>
-                  </tr>
+              
+             
+                {
+                  reviews?.map(review => (
+                    <tbody key={review._id}>
+                    <tr>
+                      <th>{review.customerName}</th>
+                      <th>{<img src={review.customerImage}  alt='the customer'/>}</th>
+                      <th>{review.description}</th>
+                     
+                    <td>
+                      {/* <Link to={`/edit-review/${review._id}`} >
+                      <button>Edit</button>
+                      </Link> */}
+                      <button className='m-1' onClick={() => deleteReviews(review._id)}>Delete</button>
+                    </td>
+                    </tr> 
+                    </tbody>
+                  ))
+                }
+                 
                 
                  
                   
-              </tbody>
+             
           </table>
       </section>
       </div>
@@ -58,4 +70,4 @@ const AllReview = () => {
   )
 }
 
-export default AllReview
+export default AllReviews

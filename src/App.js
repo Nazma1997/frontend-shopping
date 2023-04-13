@@ -11,6 +11,7 @@ import UpdateReview from "./pages/admin/pages/reviews/UpdateReview";
 import AllOrders from "./pages/admin/pages/AllOrders";
 import AdminLogin from "./pages/admin/components/Login";
 import UpdateCategory from "./pages/admin/pages/categories/UpdateCategories";
+import AllReviews from "./pages/admin/pages/reviews/AllReview";
 
 
 
@@ -36,7 +37,7 @@ const retrievedPassword = localStorage.getItem('password');
             <Route path='/categories' element={<AllCategories />}  />
             <Route path='/edit-category/:id' element={<UpdateCategory />}  />
             <Route path='/add-category' element={<AddCategory />}  />
-            <Route path='/reviews' element={<AllReview/>}  />
+            <Route path='/reviews' element={<AllReviews/>}  />
             <Route path='/add-review' element={<AddReview />}  />
             <Route path='/edit-review?:id' element={<UpdateReview />}  />
             <Route path='/orders' element={<AllOrders />}  />
