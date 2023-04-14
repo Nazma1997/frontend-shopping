@@ -5,6 +5,7 @@ import NavigationLanding from './NavigationLanding'
 import Slider from './Slider';
 import WhySection from './WhySection';
 import LatestCollection from './LatestCollection';
+import Catalog from './Catalog';
 
 
 const LandingHome = () => {
@@ -15,6 +16,7 @@ const LandingHome = () => {
        <WhySection />
 
       <LatestCollection />
+      <Catalog />
       <h1>rrtgfg</h1>
     </div>
   )
