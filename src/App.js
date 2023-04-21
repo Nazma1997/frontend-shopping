@@ -20,44 +20,44 @@ import LandingHome from "./pages/landing/components/LandingHome";
 function App() {
 
   const retrievedUserName = localStorage.getItem('userName');
-const retrievedPassword = localStorage.getItem('password');
+  const retrievedPassword = localStorage.getItem('password');
 
   return (
-  <div>
+    <div>
       <BrowserRouter>
-     <Routes >
-        
-   <>
-   {
-      retrievedUserName  && retrievedPassword && (
-        <>
-          <Route path='/dashboard' element={<Main />} />
-            <Route path='/products' element={<AllProducts />} />
-            <Route path='/add-product' element={<AddProducts />} />
-            <Route path='/edit-product/:id' element={<UpdateProducts />}  />
-            <Route path='/categories' element={<AllCategories />}  />
-            <Route path='/edit-category/:id' element={<UpdateCategory />}  />
-            <Route path='/add-category' element={<AddCategory />}  />
-            <Route path='/reviews' element={<AllReviews/>}  />
-            <Route path='/add-review' element={<AddReview />}  />
-            <Route path='/edit-review/:id' element={<UpdateReview />}  />
-            <Route path='/orders' element={<AllOrders />}  />
-          
-        </>
-      )
-    }
-          
-      <Route path='/admin-login' element={<AdminLogin />}  />
-      <Route path='/' element={<LandingHome />}  />
-   </>
-     </Routes >
-  </BrowserRouter>
+        <Routes >
+
+          <>
+            {
+              retrievedUserName && retrievedPassword && (
+                <>
+                  <Route path='/dashboard' element={<Main />} />
+                  <Route path='/products' element={<AllProducts />} />
+                  <Route path='/add-product' element={<AddProducts />} />
+                  <Route path='/edit-product/:id' element={<UpdateProducts />} />
+                  <Route path='/categories' element={<AllCategories />} />
+                  <Route path='/edit-category/:id' element={<UpdateCategory />} />
+                  <Route path='/add-category' element={<AddCategory />} />
+                  <Route path='/reviews' element={<AllReviews />} />
+                  <Route path='/add-review' element={<AddReview />} />
+                  <Route path='/edit-review/:id' element={<UpdateReview />} />
+                  <Route path='/orders' element={<AllOrders />} />
+
+                </>
+              )
+            }
+
+            <Route path='/admin-login' element={<AdminLogin />} />
+            <Route path='/' element={<LandingHome />} />
+          </>
+        </Routes >
+      </BrowserRouter>
 
 
-  </div>
+    </div>
   );
 
-  
+
 
 
 
